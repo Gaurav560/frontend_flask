@@ -10,8 +10,7 @@ export const VITE_GOOGLE_CLIENT_ID =
   localOverrideClientId || import.meta.env.VITE_GOOGLE_CLIENT_ID || '724469503053-4hlt6hvsttage9ii33hn4n7l1j59tnef.apps.googleusercontent.com';
 
 export const VITE_BACKEND_URL =
-  localOverrideBackend || import.meta.env.VITE_BACKEND_URL || 'http://footage-flow-env.eba-92jebm7b.ap-south-1.elasticbeanstalk.com';
-
+localOverrideBackend || import.meta.env.VITE_BACKEND_URL || '/api';
 // Validate required environment variables
 if (!VITE_GOOGLE_CLIENT_ID) {
   console.error('VITE_GOOGLE_CLIENT_ID is not set');

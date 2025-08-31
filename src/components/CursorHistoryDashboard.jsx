@@ -10,7 +10,7 @@ const CursorHistoryDashboard = () => {
   const fetchHistoryData = async (date) => {
     setLoading(true);
     try {
-      const response = await fetch(`http://footage-flow-env.eba-92jebm7b.ap-south-1.elasticbeanstalk.com/api/cursor/history/${userId}/${date}`);
+    const response = await fetch(`/api/cursor/history/${userId}/${date}`);
       const data = await response.json();
       if (data.success) {
         setHistoryData(data.history);
@@ -23,7 +23,7 @@ const CursorHistoryDashboard = () => {
 
   const fetchAnalytics = async (date) => {
     try {
-      const response = await fetch(`http://footage-flow-env.eba-92jebm7b.ap-south-1.elasticbeanstalk.com/api/cursor/analytics/${userId}/${date}`);
+   const response = await fetch(`/api/cursor/analytics/${userId}/${date}`);
       const data = await response.json();
       if (data.success) {
         setAnalytics(data.analytics);
