@@ -10,7 +10,8 @@ export const VITE_GOOGLE_CLIENT_ID =
   localOverrideClientId || import.meta.env.VITE_GOOGLE_CLIENT_ID || '724469503053-4hlt6hvsttage9ii33hn4n7l1j59tnef.apps.googleusercontent.com';
 
 export const VITE_BACKEND_URL =
-localOverrideBackend || import.meta.env.VITE_BACKEND_URL || '/api';
+  localOverrideBackend || import.meta.env.VITE_BACKEND_URL || 'https://backend-footage-flow.onrender.com';
+
 // Validate required environment variables
 if (!VITE_GOOGLE_CLIENT_ID) {
   console.error('VITE_GOOGLE_CLIENT_ID is not set');
