@@ -10,7 +10,7 @@ const CursorHistoryDashboard = () => {
   const fetchHistoryData = async (date) => {
     setLoading(true);
     try {
-      const response = await fetch(`https://backend-footage-flow.onrender.com/api/cursor/history/${userId}/${date}`);
+      const response = await fetch(`https://4h7vmneqzm.ap-south-1.awsapprunner.com/api/cursor/history/${userId}/${date}`);
       const data = await response.json();
       if (data.success) {
         setHistoryData(data.history);
@@ -23,7 +23,7 @@ const CursorHistoryDashboard = () => {
 
   const fetchAnalytics = async (date) => {
     try {
-      const response = await fetch(`https://backend-footage-flow.onrender.com/api/cursor/analytics/${userId}/${date}`);
+      const response = await fetch(`https://4h7vmneqzm.ap-south-1.awsapprunner.com/api/cursor/analytics/${userId}/${date}`);
       const data = await response.json();
       if (data.success) {
         setAnalytics(data.analytics);
